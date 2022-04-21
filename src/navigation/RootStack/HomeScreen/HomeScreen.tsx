@@ -10,7 +10,12 @@ const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      <Button title="Go to Details" onPress={() => navigation.navigate(AppRoutes.DetailsScreen, { userId: '123' })} />
+      <Button
+        title="Open Stories"
+        onPress={() =>
+          navigation.navigate(AppRoutes.StoriesStack, { screen: AppRoutes.StoriesViewScreen, params: { storyId: '1' } })
+        }
+      />
     </View>
   );
 };

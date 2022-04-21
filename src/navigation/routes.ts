@@ -1,6 +1,11 @@
 enum AppRoutes {
   HomeScreen = 'HomeScreen',
-  DetailsScreen = 'DetailsScreen',
+
+  StoriesStack = 'StoriesStack',
+  StoriesMyScreen = 'StoriesMyScreen',
+  StoriesViewScreen = 'StoriesViewScreen',
+  StoriesCreateScreen = 'StoriesCreateScreen',
+  StoriesPrePublishScreen = 'StoriesPrePublishScreen',
 }
 
 export default AppRoutes;

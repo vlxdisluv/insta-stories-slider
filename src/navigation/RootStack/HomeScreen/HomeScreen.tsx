@@ -1,8 +1,9 @@
-import React from 'react';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import React from 'react';
 import { FC } from 'react';
 import { Button, Text, View } from 'react-native';
+
 import AppRoutes from '../../routes';
 import { RootStackParamList } from '../RootStack';
 

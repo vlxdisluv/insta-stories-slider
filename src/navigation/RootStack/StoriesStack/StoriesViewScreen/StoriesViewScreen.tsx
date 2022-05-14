@@ -1,8 +1,9 @@
-import React from 'react';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import React from 'react';
 import { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
 import AppRoutes from '../../../routes';
 import { StoriesStackParamListExtended } from '../StoriesStack';
 

@@ -1,12 +1,13 @@
-import React from 'react';
 import { RouteProp } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
+import { TransitionPresets } from '@react-navigation/stack';
+import React from 'react';
 import { FC } from 'react';
+
 import AppRoutes from '../../routes';
 import { RootStackParamList } from '../RootStack';
 import StoriesViewScreen from './StoriesViewScreen';
 import { StoryType } from './tyoe';
-import { TransitionPresets } from '@react-navigation/stack';
 
 const Stack = createNativeStackNavigator<StoriesStackParamListExtended>();
 

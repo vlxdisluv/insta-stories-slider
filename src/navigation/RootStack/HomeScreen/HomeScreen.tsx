@@ -1,15 +1,14 @@
+import AppRoutes from '@navigation/routes';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React from 'react';
-import { FC } from 'react';
-import { Button, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-import AppRoutes from '../../routes';
 import { RootStackParamList } from '../RootStack';
 
 const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles.root}>
       <Text>Home Screen</Text>
       <Button
         title="Open Stories"
@@ -20,6 +19,14 @@ const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export interface HomeScreenProps {
   navigation: NativeStackNavigationProp<RootStackParamList, AppRoutes.HomeScreen>;

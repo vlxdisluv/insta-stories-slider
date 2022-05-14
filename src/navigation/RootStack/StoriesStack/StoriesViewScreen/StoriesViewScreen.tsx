@@ -1,10 +1,9 @@
+import AppRoutes from '@navigation/routes';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import AppRoutes from '../../../routes';
 import { StoriesStackParamListExtended } from '../StoriesStack';
 
 const StoriesViewScreen: FC<StoriesViewScreenProps> = ({

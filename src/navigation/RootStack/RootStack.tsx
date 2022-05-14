@@ -1,8 +1,8 @@
+import AppRoutes from '@navigation/routes';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { TransitionPresets } from '@react-navigation/stack';
 import React from 'react';
 
-import AppRoutes from '../routes';
 import HomeScreen from './HomeScreen';
 import StoriesStack, { StoriesStackParamList } from './StoriesStack/StoriesStack';
 import { SubNavigator } from './types';

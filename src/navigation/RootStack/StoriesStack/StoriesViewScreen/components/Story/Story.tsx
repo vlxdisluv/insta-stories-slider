@@ -2,16 +2,16 @@ import Avatar from '@components/Avatar';
 import React, { FC } from 'react';
 import { Image, ImageSourcePropType, Platform, SafeAreaView, StyleSheet, TextInput, View } from 'react-native';
 
-export type Story = {
+export interface IStory {
   id: string;
   source: ImageSourcePropType;
   user: string;
   avatar: ImageSourcePropType;
-};
+}
 
-type StoryProps = {
-  story: Story;
-};
+interface StoryProps {
+  story: IStory;
+}
 
 const Story: FC<StoryProps> = ({ story: { user, avatar, source } }) => {
   return (

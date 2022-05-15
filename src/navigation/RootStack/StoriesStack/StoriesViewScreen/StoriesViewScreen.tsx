@@ -2,11 +2,10 @@ import AppRoutes from '@navigation/routes';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { FC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
 import { StoriesStackParamListExtended } from '../StoriesStack';
-import Story from './components/Story';
-import { IStory } from './components/Story/Story';
+import { IStory } from '../types';
+import Stories from './Stories/Stories';
 
 const stories: IStory[] = [
   {
@@ -28,20 +27,12 @@ const StoriesViewScreen: FC<StoriesViewScreenProps> = ({
     params: { storyId },
   },
 }) => {
-  return (
-    <View style={styles.root}>
-      <Text>Stories</Text>
-      {stories.map((story) => {
-        return <Story key={story.id} story={story} />;
-      })}
-    </View>
-  );
+  return <Stories storyId={storyId} stories={stories} />;
 };
+
 export interface StoriesViewScreenProps {
   navigation: NativeStackNavigationProp<StoriesStackParamListExtended, AppRoutes.StoriesViewScreen>;
   route: RouteProp<StoriesStackParamListExtended, AppRoutes.StoriesViewScreen>;
 }
-
-const styles = StyleSheet.create({ root: { flex: 1, justifyContent: 'center', alignItems: 'center' } });
 
 export default StoriesViewScreen;

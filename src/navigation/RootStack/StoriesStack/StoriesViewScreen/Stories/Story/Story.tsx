@@ -1,13 +1,7 @@
 import Avatar from '@components/Avatar';
+import { IStory } from '@navigation/RootStack/StoriesStack/types';
 import React, { FC } from 'react';
-import { Image, ImageSourcePropType, Platform, SafeAreaView, StyleSheet, TextInput, View } from 'react-native';
-
-export interface IStory {
-  id: string;
-  source: ImageSourcePropType;
-  user: string;
-  avatar: ImageSourcePropType;
-}
+import { Image, Platform, SafeAreaView, StyleSheet, TextInput, View } from 'react-native';
 
 interface StoryProps {
   story: IStory;

@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 
 import { RootStackParamList } from '../RootStack';
 import StoriesViewScreen from './StoriesViewScreen';
-import { StoryType } from './type';
+import { StoryType } from './types';
 
 const Stack = createNativeStackNavigator<StoriesStackParamListExtended>();
 

@@ -26,6 +26,7 @@ const absoluteFillObject = { position: 'absolute', left: 0, right: 0, top: 0, bo
 const StoryAnimatedView: FC<StoryAnimatedViewProps> = ({ x, index, children }) => {
   const rootStylez = useAnimatedStyle(() => {
     const offset = index * width;
+
     const inputRange = [offset - width, offset + width];
     const translateX = interpolate(x.value, inputRange, [width / ratio, -width / ratio], extrapolate);
     const rotateY = interpolate(x.value, inputRange, [angle, -angle], extrapolate);
@@ -63,6 +64,7 @@ const StoryAnimatedView: FC<StoryAnimatedViewProps> = ({ x, index, children }) =
 
     return {
       ...(absoluteFillObject as ViewStyle),
+      zIndex: opacity === 0 ? 0 : 1,
       backgroundColor: 'black',
       opacity,
     };
@@ -70,8 +72,8 @@ const StoryAnimatedView: FC<StoryAnimatedViewProps> = ({ x, index, children }) =
 
   return (
     <Animated.View style={rootStylez}>
-      {children}
       <Animated.View style={maskStylez} />
+      {children}
     </Animated.View>
   );
 };
